@@ -1,0 +1,67 @@
+<!--
+ Student Registration System 
+ Project allows adding and deleting students
+ Created by : Priti Jangid  
+  --> 
+ 
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="student-style.css">
+ </head>
+ <body>
+
+<!-- Main page contains whole registraion system -->
+    <div class="Main-page">
+        <header class="top-area">
+
+<!-- Title of form -->
+            <h1>Student Registration</h1>
+            <p>Data management of students for current year semester in simple and organized way</p>
+        </header>
+
+        <div class="entry-table">
+            <h2 style="font-size: 1.5rem;">Add Student</h2>
+            <form id="StudentForm">
+
+<!-- Student name -->
+                <input type="text" id="student_name" placeholder="Student Full Name" required>
+<!-- Student ID -->
+                <input type="text" id="student_id" placeholder="ID Number" required>
+<!-- Student email -->
+                <input type="email" id="student_email" placeholder="Email Address" required>
+<!-- Student contact -->
+                <input type="text" id="student_contact" placeholder="Contact Number" required>
+
+                <button type="submit" id="save-button">Save Student Record</button>
+            </form>
+        </div>
+
+        <hr style="margin: 27px; opacity: 0.3;">
+
+<!-- Student data display (added using js)-->
+        <div class="data-area">
+            <h3>Registered Students</h3>
+            <div class="container-scroll">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Student ID</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody id="StudentTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="student-script.js"></script>
+ </body>
+ </html>
